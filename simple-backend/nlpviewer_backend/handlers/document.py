@@ -20,8 +20,9 @@ def create(request):
 
     doc = Document(
         name=received_json_data.get('name'),
+        project=received_json_data.get('project'),
         textPack=received_json_data.get('textPack'),
-        ontology=received_json_data.get('ontology')
+        # ontology=received_json_data.get('ontology')
     )
 
     doc.save()
